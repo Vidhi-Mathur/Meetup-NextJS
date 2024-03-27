@@ -48,7 +48,7 @@ export async function getStaticPaths(){
   client.close()
     return {
         //Means consists of all supported Ids, if user entered m2, m4, would see a 404 error
-        fallback: false,
+        fallback: 'blocking',
         paths: meetups.map(meetup => ({
             params: {
                 meetupId: meetup._id.toString()
