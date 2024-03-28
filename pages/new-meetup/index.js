@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
-import MeetupForm from "../../components/meetups/NewMeetupForm";
+import NewMeetupForm from "../../components/meetups/NewMeetupForm";
 import Head from "next/head";
 
-export default function newMeetupPage(){
+export default function NewMeetupPage(){
     const router = useRouter()
     async function addMeetUpHandler(enteredData){
         const response = await fetch('/api/new-meetup', {
@@ -21,7 +21,7 @@ export default function newMeetupPage(){
         <title>React Meetups</title>
         {/* What displays when searched on browser */}
         <meta name="description" content="Add your own meetups and create amazing networking opportunities"/>
-        <MeetupForm onAddMeetup={addMeetUpHandler}/>
+        <NewMeetupForm onAddMeetup={addMeetUpHandler}/>
     </Head>
     </>
     )
