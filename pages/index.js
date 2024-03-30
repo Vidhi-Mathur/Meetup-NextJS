@@ -18,8 +18,8 @@ export default function HomePage(props){
     <Head>
       <title>React Meetups</title>
       <meta name="description" content="Browse a huge list of highly active react meetups"/>
-      <MeetupList meetups={props.meetups} />
     </Head>
+      <MeetupList meetups={props.meetups} />
     </>
   )
 } 
